@@ -31,6 +31,10 @@ impl Mass {
         Self::from_kilograms(grams / KILOGRAM_GRAM_FACTOR)
     }
 
+    pub fn from_milligrams(milligrams: f64) -> Self {
+        Self::from_kilograms(milligrams / KILOGRAM_MILLIGRAM_FACTOR)
+    }
+
     // Outputs, metric
     pub fn as_kilograms(&self) -> f64 {
         self.kilograms
@@ -38,6 +42,10 @@ impl Mass {
 
     pub fn as_grams(&self) -> f64 {
         self.kilograms * KILOGRAM_GRAM_FACTOR
+    }
+
+    pub fn as_milligrams(&self) -> f64 {
+        self.kilograms * KILOGRAM_MILLIGRAM_FACTOR
     }
 }
 
