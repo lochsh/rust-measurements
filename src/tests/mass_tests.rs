@@ -34,3 +34,11 @@ fn micrograms() {
 
     assert_almost_eq(micrograms, 5500000000.0);
 }
+
+#[test]
+fn nanograms() {
+    let mass = Mass::from_kilograms(0.154);
+    let nanograms = mass.as_nanograms();
+
+    assert_almost_eq(nanograms, 154000000000.0);
+}

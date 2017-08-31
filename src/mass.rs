@@ -39,6 +39,10 @@ impl Mass {
         Self::from_kilograms(micrograms / KILOGRAM_MICROGRAM_FACTOR)
     }
 
+    pub fn from_nanograms(nanograms: f64) -> Self {
+        Self::from_kilograms(nanograms / KILOGRAM_NANOGRAM_FACTOR)
+    }
+
     // Outputs, metric
     pub fn as_kilograms(&self) -> f64 {
         self.kilograms
@@ -54,6 +58,10 @@ impl Mass {
 
     pub fn as_micrograms(&self) -> f64 {
         self.kilograms * KILOGRAM_MICROGRAM_FACTOR
+    }
+
+    pub fn as_nanograms(&self) -> f64 {
+        self.kilograms * KILOGRAM_NANOGRAM_FACTOR
     }
 }
 
